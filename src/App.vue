@@ -18,7 +18,7 @@ export default {
   methods: {
     async getUsers(){
       try {
-        const res = await axios.get('http://localhost:3000/api/users');
+        const res = await axios.get('/api/users');
         if(!res) return;
         this.users = res.data;
       } catch (error) {
