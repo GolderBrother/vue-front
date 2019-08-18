@@ -6,10 +6,5 @@ LABEL version="1.0"
 # 把当前目录下的所有文件都拷贝到nginx配置的静态资源目录下
 COPY ./dist /usr/share/nginx/html
 COPY ./vue-front.conf /etc/nginx/conf.d
-WORKDIR /app
-# 运行命令
-RUN npm install
 # 向外暴露80端口(nginx默认端口)
 EXPOSE 80
-# 基于镜像生成容器后，执行命令
-CMD npm start
