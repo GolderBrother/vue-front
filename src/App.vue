@@ -17,9 +17,13 @@ export default {
   },
   methods: {
     async getUsers(){
-      const res = await axios.get('http://localhost:3000/api/users');
-      if(!res) return;
-      this.users = res.data;
+      try {
+        const res = await axios.get('http://localhost:3000/api/users');
+        if(!res) return;
+        this.users = res.data;
+      } catch (error) {
+        console.log(error);
+      }
     }
   },
   mounted(){
