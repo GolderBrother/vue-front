@@ -22,7 +22,7 @@ export default {
         if(!res) return;
         this.users = res.data;
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
   },
