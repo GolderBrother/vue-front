@@ -5,6 +5,6 @@ LABEL name="vue-front"
 LABEL version="1.0"
 # 把当前目录下的所有文件都拷贝到nginx配置的静态资源目录下
 COPY ./dist /usr/share/nginx/html
-COPY ./vue-front.conf /etc/nginx/conf.d
+COPY ./vue-front.conf /etc/nginx/conf.d/
 # 向外暴露80端口(nginx默认端口)
 EXPOSE 80
